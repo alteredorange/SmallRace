@@ -44,7 +44,7 @@ public class CGameManager : MonoBehaviour {
             m_LocalObj = (GameObject)Network.Instantiate(CarPrefab, Vector3.down * 200, Quaternion.identity, 0);
             m_LocalObj.transform.position = m_SpawnPoints[m_LocalID].position;
             m_LocalObj.GetComponent<CCar>().m_Player = m_Players[m_LocalID];
-            Debug.Log(Network.player.ipAddress);
+            GameObject.Find("IPT").GetComponent<UnityEngine.UI.Text>().text = Network.player.ipAddress;
         }
     }
 

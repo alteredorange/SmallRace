@@ -11,9 +11,11 @@ public class CCar : MonoBehaviour {
     Rigidbody rb;
     NetworkView NetView;
     Transform m_Camera;
-    float StartY;
+    Transform m_Mesh;
+    float meshStartY;
+    ParticleSystem[] m_Particles;
+
     bool firstData = true;
-    bool firstUpdate = true;
     float m_Speed;
 
     float InputX = 0;
@@ -24,13 +26,16 @@ public class CCar : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         NetView = GetComponent<NetworkView>();
         m_Camera = Camera.main.transform;
+        m_Mesh = transform.FindChild("Mesh");
+        meshStartY = m_Mesh.localPosition.y;
+        m_Particles = GetComponentsInChildren<ParticleSystem>();
     }
 
 
     void CameraFollow()
     {
         Vector3 temp = Vector3.zero;
-        m_Camera.position = Vector3.SmoothDamp(m_Camera.position, new Vector3(rb.position.x, StartY, rb.position.z) - transform.TransformDirection(CameraOffset), ref temp, 0.05f);
+        m_Camera.position = Vector3.SmoothDamp(m_Camera.position, rb.position - transform.TransformDirection(CameraOffset), ref temp, 0.05f);
         m_Camera.LookAt(transform);
     }
     void Movement()
@@ -38,23 +43,22 @@ public class CCar : MonoBehaviour {
         rb.velocity = transform.forward * m_Speed;
         m_Speed = Mathf.Clamp(m_Speed + InputY * Time.deltaTime * Accel, -maxSpeed/2f, maxSpeed);
         if (InputY == 0)
-            m_Speed *= 0.98f;
-        transform.Rotate(0, InputX * 40 * Time.deltaTime, 0);
+            m_Speed *= 0.99f;
+        transform.Rotate(0, InputX * 65 * Time.deltaTime, 0);
     }
 
     void Update()
     {
         if (m_Player == null)
             return;
-        if (firstUpdate)
-        {
-            StartY = transform.position.y;
-            firstUpdate = false;
-        }
 
-        Vector3 pos = transform.position;
-        pos.y = Mathf.Sin(Time.timeSinceLevelLoad * 2)*0.3f + StartY;
-        transform.position = pos;
+        m_Mesh.localPosition = Vector3.up * (Mathf.Sin(Time.timeSinceLevelLoad * 2) * 0.2f + meshStartY);
+
+        if (InputY > 0)
+        {
+            foreach (ParticleSystem part in m_Particles)
+                part.Emit((int)(200 * Time.deltaTime));
+        }
 
         if (NetView.isMine)
         {
@@ -80,23 +84,31 @@ public class CCar : MonoBehaviour {
         int ID = -1;
         Vector3 Pos = Vector3.zero;
         Vector3 Vel = Vector3.zero;
+        Quaternion Rot = Quaternion.identity;
+        int forward = 0;
 
         if (stream.isWriting)
         {
             ID = m_Player.m_ID;
             Pos = rb.position;
-            Vel = rb.velocity;  
+            Vel = rb.velocity;
+            Rot = transform.rotation;
+            forward = (int)InputY;
         }
 
         stream.Serialize(ref ID);
         stream.Serialize(ref Pos);
         stream.Serialize(ref Vel);
+        stream.Serialize(ref Rot);
+        stream.Serialize(ref forward);
         
         if (stream.isReading)
         {
             m_Player = CGameManager.ins.m_Players[ID];
             rb.position = Pos;
             rb.velocity = Vel;
+            rb.rotation = Rot;
+            InputY = forward;
         }
     }
 

@@ -1,7 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour {
+
+    string ipToConnect = "192.168.1.2";
+    public InputField ipInput;
+
+    void Awake()
+    {
+        ipInput.onValueChange.AddListener(OnIPChange);
+    }
 
     public void OnHostClick()
     {
@@ -10,7 +19,12 @@ public class MenuManager : MonoBehaviour {
     }
     public void OnLocalJoinClick()
     {
-        Network.Connect("127.0.0.1", 8303);
+        Network.Connect(ipToConnect, 8303);
+    }
+
+    public void OnIPChange(string IP)
+    {
+        ipToConnect = IP;
     }
 
     void OnServerInitialized()
