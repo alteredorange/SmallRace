@@ -567,8 +567,6 @@ MonoBehaviour:
   checkPointArray:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   startPos: {x: 11, y: 5.0999999, z: -.0199999996}
   Lap: 2
   currCheck: 0
