@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SCRIPTS\CCar.cs">
+    <Files>
+      <File FileName="Assets\SCRIPTS\MenuManager.cs" Line="31" Column="6" />
+      <File FileName="Assets\SCRIPTS\CContext.cs" Line="33" Column="1" />
+      <File FileName="Assets\SCRIPTS\CGameManager.cs" Line="44" Column="76" />
+      <File FileName="Assets\SCRIPTS\CCar.cs" Line="30" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
