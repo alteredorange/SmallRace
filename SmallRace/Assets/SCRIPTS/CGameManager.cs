@@ -23,6 +23,8 @@ public class CGameManager : MonoBehaviour {
     public static CGameManager ins = null;
 
     public GameObject CarPrefab;
+    public int m_LapsNeeded;
+    public int m_CheckpointsNeeded;
     public Transform[] m_SpawnPoints;
     [HideInInspector] public NetworkView NetView;
     [HideInInspector] public CPlayer[] m_Players = new CPlayer[6];

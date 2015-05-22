@@ -153,10 +153,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 415714}
   - 54: {fileID: 5486588}
-  - 114: {fileID: 11497694}
   - 65: {fileID: 6575192}
   - 114: {fileID: 11409340}
-  - 114: {fileID: 11426044}
   - 114: {fileID: 11485302}
   - 148: {fileID: 14850062}
   m_Layer: 19
@@ -394,13 +392,13 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165724}
   serializedVersion: 2
-  m_Mass: 70
+  m_Mass: 1
   m_Drag: 3
   m_AngularDrag: 4
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!64 &6488280
 MeshCollider:
@@ -410,7 +408,7 @@ MeshCollider:
   m_GameObject: {fileID: 144310}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 023a2a6931f3c5d4c8f0878a81f6f60e, type: 3}
@@ -422,7 +420,7 @@ BoxCollider:
   m_GameObject: {fileID: 165724}
   m_Material: {fileID: 13400000, guid: 79b1067785b283447b121aeb7fca9fad, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.35000002, y: .730000019, z: 3.08999991}
   m_Center: {x: 0, y: 0, z: 0}
@@ -553,26 +551,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jetSound: {fileID: 8245332}
---- !u!114 &11426044
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cd9ff09e9a69234ca66990f0def84f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkPointArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  startPos: {x: 11, y: 5.0999999, z: -.0199999996}
-  Lap: 2
-  currCheck: 0
-  currLap: 0
 --- !u!114 &11430864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -598,30 +576,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8b52b376070d545a22abc93986c2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraOffset: {x: 0, y: -2, z: 4}
-  maxSpeed: 30
-  Accel: 6
---- !u!114 &11497694
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4d62c4386d46f4b9d6db8a6d3081c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_hoverForce: 1000
-  m_hoverHeight: 1.25
+  CameraOffset: {x: 0, y: 2, z: -4}
+  m_hoverForce: 9
+  m_hoverHeight: 2
   m_hoverPoints:
   - {fileID: 159318}
   - {fileID: 159388}
   - {fileID: 102398}
   - {fileID: 135816}
-  m_forwardAcl: 6500
-  m_backwardAcl: 2500
-  m_turnStrength: 1000
+  m_forwardAcl: 100
+  m_backwardAcl: 25
+  m_turnStrength: 10
   m_leftAirBrake: {fileID: 146430}
   m_rightAirBrake: {fileID: 111346}
 --- !u!124 &12427144
@@ -638,7 +603,7 @@ NetworkView:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165724}
   m_Enabled: 1
-  m_StateSynchronization: 1
+  m_StateSynchronization: 2
   m_Observed: {fileID: 11485302}
   m_ViewID:
     m_ID: 0

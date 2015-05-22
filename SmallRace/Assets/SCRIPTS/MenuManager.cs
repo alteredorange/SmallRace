@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour {
 
-    string ipToConnect = "192.168.1.45";
+    string ipToConnect = "192.168.1.2";
     public InputField ipInput;
 
     void Awake()
