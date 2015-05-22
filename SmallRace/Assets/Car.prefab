@@ -551,27 +551,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jetSound: {fileID: 8245332}
-<<<<<<< HEAD
-=======
---- !u!114 &11426044
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cd9ff09e9a69234ca66990f0def84f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkPointArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  startPos: {x: 11, y: 5.0999999, z: -.0199999996}
-  Lap: 2
-  currCheck: 0
-  currLap: 0
->>>>>>> origin/master
 --- !u!114 &11430864
 MonoBehaviour:
   m_ObjectHideFlags: 1

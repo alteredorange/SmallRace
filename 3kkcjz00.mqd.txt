@@ -1,0 +1,15 @@
+﻿Revert "Merge remote-tracking branch 'origin/master'"
+
+This reverts commit 10723caf1f87b98959587e9217751cb029c5a5dd, reversing
+changes made to 94a2f48787f735d6e8dc8b965d51d6e062e5d914.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   SmallRace/Assets/Car.prefab
+#	modified:   SmallRace/Assets/Track4.unity
+#
+
