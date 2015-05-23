@@ -36,8 +36,9 @@ public class CCar : MonoBehaviour {
     float InputX = 0;
     float InputY = 0;
     int m_CheckPoints = 0;
-    int m_Laps = 0;
+    public int m_Laps = 0;
     bool m_Done = false;
+	public int lapCount = 1;
 
     // Smooth
     Vector3 posGot;
@@ -47,6 +48,7 @@ public class CCar : MonoBehaviour {
 
     void Awake()
     {
+		GameObject.Find("LAPCOUNT").GetComponent<UnityEngine.UI.Text>().text = (lapCount+" / "+CGameManager.ins.m_LapsNeeded);
         rb = GetComponent<Rigidbody>();
         NetView = GetComponent<NetworkView>();
         m_Camera = Camera.main.transform;
@@ -144,10 +146,14 @@ public class CCar : MonoBehaviour {
             m_CheckPoints++;
         else if (Col.tag == "EndLap" && m_CheckPoints >= CGameManager.ins.m_CheckpointsNeeded)
         {
+			lapCount++;
+			GameObject.Find("LAPCOUNT").GetComponent<UnityEngine.UI.Text>().text = (lapCount+" / "+CGameManager.ins.m_LapsNeeded);
             m_Laps++;
             m_CheckPoints = 0;
             if (m_Laps >= CGameManager.ins.m_LapsNeeded)
             {
+
+				GameObject.Find("LAPCOUNT").GetComponent<UnityEngine.UI.Text>().text = ("FINISH!");
                 m_Done = true;
             }
         }
