@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/MenuTrack4.unity
   - enabled: 1
     path: Assets/Track4.unity
+  - enabled: 1
+    path: Assets/Track1.unity

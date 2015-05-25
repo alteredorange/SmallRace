@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour {
 
-    string ipToConnect = "192.168.1.2";
+    string ipToConnect = "192.168.1.45";
     public InputField ipInput;
 
     void Awake()
@@ -30,13 +30,13 @@ public class MenuManager : MonoBehaviour {
     void OnServerInitialized()
     {
         Network.isMessageQueueRunning = false;
-        CContext.Context.ChangeLevel("Track4");
+        CContext.Context.ChangeLevel("Track1");
     }
 
     void OnConnectedToServer()
     {
         Network.isMessageQueueRunning = false;
-        CContext.Context.ChangeLevel("Track4");
+        CContext.Context.ChangeLevel("Track1");
     }
 
 }
