@@ -37,8 +37,7 @@ public class CCar : MonoBehaviour {
     float InputY = 0;
     int m_CheckPoints = 0;
     public int m_Laps = 0;
-    bool m_Done = false;
-	public int lapCount = 1;
+    public bool m_CanMove = false;
 
     // Smooth
     Vector3 posGot;
@@ -48,7 +47,6 @@ public class CCar : MonoBehaviour {
 
     void Awake()
     {
-		GameObject.Find("LAPCOUNT").GetComponent<UnityEngine.UI.Text>().text = (lapCount+" / "+CGameManager.ins.m_LapsNeeded);
         rb = GetComponent<Rigidbody>();
         NetView = GetComponent<NetworkView>();
         m_Camera = Camera.main.transform;
@@ -125,7 +123,7 @@ public class CCar : MonoBehaviour {
                       hoverPoint.transform.position);
             }
         }
-        if (m_Done)
+        if (!m_CanMove)
             return;
         // Forward
         if (Mathf.Abs(m_currThrust) > 0)
@@ -138,23 +136,38 @@ public class CCar : MonoBehaviour {
             rb.AddRelativeTorque(Vector3.up * m_currTurn * m_turnStrength);
     }
 
+    public void OnRestart()
+    {
+        transform.position = CGameManager.ins.m_SpawnPoints[m_Player.m_ID].position;
+        transform.rotation = Quaternion.identity;
+        m_Laps = 0;
+        m_CheckPoints = 0;
+        m_CanMove = false;
+    }
+
     void OnTriggerEnter(Collider Col)
     {
-        if (m_Done)
+        if (!m_CanMove || !NetView.isMine)
             return;
-        if (Col.tag == "CheckPoint")
-            m_CheckPoints++;
+        if (Col.tag == "CheckPoint" /* lazy way */)
+        {
+            int id = int.Parse(Col.name.Substring(Col.name.Length - 1));
+            if (m_CheckPoints < id)
+                m_CheckPoints++;
+        }
         else if (Col.tag == "EndLap" && m_CheckPoints >= CGameManager.ins.m_CheckpointsNeeded)
         {
-			lapCount++;
-			GameObject.Find("LAPCOUNT").GetComponent<UnityEngine.UI.Text>().text = (lapCount+" / "+CGameManager.ins.m_LapsNeeded);
             m_Laps++;
+            CGameManager.ins.OnLap(m_Laps);
             m_CheckPoints = 0;
             if (m_Laps >= CGameManager.ins.m_LapsNeeded)
             {
-
-				GameObject.Find("LAPCOUNT").GetComponent<UnityEngine.UI.Text>().text = ("FINISH!");
-                m_Done = true;
+                NetworkMessageInfo a = new NetworkMessageInfo();
+                if (Network.isServer)
+                    CGameManager.ins.Client_Finish(CGameManager.ins.m_TimePassed, a, 0);
+                else
+                    CGameManager.ins.NetView.RPC("Client_Finish", RPCMode.Server, CGameManager.ins.m_TimePassed);
+                m_CanMove = false;
             }
         }
     }
@@ -179,6 +192,14 @@ public class CCar : MonoBehaviour {
             if (InputY == -1)
                 InputY = -2;*/
             // Main Thrust
+            if (m_CanMove)
+            {
+                if (CGameManager.ins.m_TimePassed == -1)
+                    CGameManager.ins.m_TimePassed = 0;
+                CGameManager.ins.m_TimePassed += Time.deltaTime;
+            }
+            else
+                CGameManager.ins.m_TimePassed = -1;
             m_currThrust = 0.0f;
             float aclAxis = ETCInput.GetAxis("Vertical");
             if (aclAxis > m_deadZone)

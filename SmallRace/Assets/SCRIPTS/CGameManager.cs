@@ -1,5 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
+public class CPlayerStat
+{
+    public string Name;
+    public float Time;
+    public int Rank;
+
+    public CPlayerStat()
+    {
+        Name = "";
+        Time = 0f;
+        Rank = 0;
+    }
+}
 
 public class CPlayer
 {
@@ -23,11 +38,18 @@ public class CGameManager : MonoBehaviour {
     public static CGameManager ins = null;
 
     public GameObject CarPrefab;
+    public GameObject StatsHolder;
+    public Text TIME_COUNTER;
+    [HideInInspector] public float m_TimePassed = -1;
+    public Text LAP_COUNTER;
+
     public int m_LapsNeeded;
     public int m_CheckpointsNeeded;
     public Transform[] m_SpawnPoints;
     [HideInInspector] public NetworkView NetView;
     [HideInInspector] public CPlayer[] m_Players = new CPlayer[6];
+    [HideInInspector] public CPlayerStat[] m_PlayerStats = new CPlayerStat[6];
+    int m_StatCounter = 0;
     public static int m_LocalID = -1;
     public static GameObject m_LocalObj;
 
@@ -38,14 +60,19 @@ public class CGameManager : MonoBehaviour {
         ins = this;
         NetView = GetComponent<NetworkView>();
         for (int i = 0; i < 6; i++)
+        {
             m_Players[i] = null;
+            m_PlayerStats[i] = null;
+        }
         if (Network.isServer)
         {
             m_LocalID = 0;
+            OnLap(0);
             SubmitPlayer(0, Network.player);
             m_LocalObj = (GameObject)Network.Instantiate(CarPrefab, Vector3.down * 200, Quaternion.identity, 0);
             m_LocalObj.transform.position = m_SpawnPoints[m_LocalID].position;
             m_LocalObj.GetComponent<CCar>().m_Player = m_Players[m_LocalID];
+            m_LocalObj.GetComponent<CCar>().OnRestart();
             GameObject.Find("IPT").GetComponent<UnityEngine.UI.Text>().text = Network.player.ipAddress;
         }
     }
@@ -66,6 +93,12 @@ public class CGameManager : MonoBehaviour {
                 m_NextPlayersUpdate = Time.time + 0.2f;
             }
         }
+        TIME_COUNTER.text = (m_TimePassed == -1) ? "" : CGlobal.FormatTime(m_TimePassed);
+    }
+
+    public void OnLap(int Lap)
+    {
+        LAP_COUNTER.text = Lap + " / " + m_LapsNeeded;
     }
 
     void OnPlayerConnected(NetworkPlayer netPlayer)
@@ -89,8 +122,68 @@ public class CGameManager : MonoBehaviour {
         NetView.RPC("Server_RemovePlayer", RPCMode.Others, id);
     }
 
+    void RestartGame()
+    {
+        if (!Network.isServer)
+            return;
+        for (int i = 0; i < 6; i++)
+            m_PlayerStats[i] = null;
+        m_StatCounter = 0;
+
+        NetView.RPC("Server_Restart", RPCMode.All);
+    }
+    IEnumerator RestartTheGame()
+    {
+        string strToSend = "Stats:\n";
+        for (int i = 0; i < 6; i++)
+            if (m_PlayerStats[i] != null)
+                strToSend += m_PlayerStats[i].Rank + ". " + m_PlayerStats[i].Name + "\t" + CGlobal.FormatTime(m_PlayerStats[i].Time) + "\n";
+        NetView.RPC("Server_ShowStat", RPCMode.All, strToSend);
+        yield return new WaitForSeconds(3f);
+        RestartGame();
+    }
 
     // RPCs
+    [RPC]
+    void Server_Start()
+    {
+        m_LocalObj.GetComponent<CCar>().m_CanMove = true;
+    }
+    [RPC]
+    void Server_ShowStat(string str)
+    {
+        StatsHolder.SetActive(true);
+        StatsHolder.transform.FindChild("Text").GetComponent<Text>().text = str;
+    }
+    [RPC]
+    void Server_Restart()
+    {
+        m_TimePassed = 0;
+        StatsHolder.SetActive(false);
+        foreach (CCar car in GameObject.FindObjectsOfType<CCar>())
+            car.OnRestart();
+    }
+
+    [RPC]
+    public void Client_Finish(float time, NetworkMessageInfo info, int ID = -1)
+    {
+        int id = GetPlayerID(info.sender);
+        if (ID != -1)
+            id = ID;
+        if (id == -1)
+            return;
+        m_PlayerStats[m_StatCounter] = new CPlayerStat();
+        m_PlayerStats[m_StatCounter].Name = m_Players[id].m_Name;
+        m_PlayerStats[m_StatCounter].Time = time;
+        m_PlayerStats[m_StatCounter].Rank = m_StatCounter;
+        m_StatCounter++;
+
+        if (m_StatCounter >= PlayerNum())
+        {
+            StartCoroutine(RestartTheGame());
+        }
+    }
+
     [RPC]
     void Server_UpdatePlayer(int ID, string Name, int Score)
     {
@@ -114,6 +207,8 @@ public class CGameManager : MonoBehaviour {
         m_LocalObj = (GameObject)Network.Instantiate(CarPrefab, Vector3.down * 200, Quaternion.identity, 0);
         m_LocalObj.transform.position = m_SpawnPoints[m_LocalID].position;
         m_LocalObj.GetComponent<CCar>().m_Player = m_Players[ID];
+        m_LocalObj.GetComponent<CCar>().OnRestart();
+        OnLap(0);
     }
 
     // Helper Functions
@@ -130,5 +225,22 @@ public class CGameManager : MonoBehaviour {
             if (m_Players[i] != null && m_Players[i].m_NetPlayer == netPlayer)
                 ID = i;
         return ID;
+    }
+    public int PlayerNum()
+    {
+        int num = 0;
+        for (int i = 0; i < 6; i++)
+            if (m_Players[i] != null)
+                num++;
+        return num;
+    }
+
+
+    // Button Functions
+    public void OnStartClick()
+    {
+        if (!Network.isServer)
+            return;
+        NetView.RPC("Server_Start", RPCMode.All);
     }
 }
