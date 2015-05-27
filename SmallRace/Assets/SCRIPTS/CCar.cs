@@ -3,6 +3,13 @@ using System.Collections;
 
 public class CCar : MonoBehaviour {
 
+
+	// Boost Power up Variables
+	private float maxExtraBoost = 1.0f;
+	private float extraBoost = 0f;
+	private bool isBoosting = false;
+	private float boostTime = 1.0f;
+	
     public CPlayer m_Player = null;
     public Vector3 CameraOffset;
     //public float maxSpeed = 10f;
@@ -144,6 +151,17 @@ public class CCar : MonoBehaviour {
         m_CheckPoints = 0;
         m_CanMove = false;
     }
+	
+	IEnumerator BoostCoroutine()
+	{
+		//print("Boost Start");
+		isBoosting = true;
+		extraBoost = maxExtraBoost;
+		yield return new WaitForSeconds(boostTime);
+		extraBoost = 0f;
+		isBoosting = false;
+		//print("Boost Stop");
+	}
 
     void OnTriggerEnter(Collider Col)
     {
@@ -170,6 +188,11 @@ public class CCar : MonoBehaviour {
                 m_CanMove = false;
             }
         }
+		// Entered Boost Trigger?
+		else if (Col.tag == "Boost" && !isBoosting)
+		{
+			StartCoroutine(BoostCoroutine());
+		}
     }
 
     void Update()
@@ -201,7 +224,10 @@ public class CCar : MonoBehaviour {
             else
                 CGameManager.ins.m_TimePassed = -1;
             m_currThrust = 0.0f;
-            float aclAxis = ETCInput.GetAxis("Vertical");
+            
+			float aclAxis = ETCInput.GetAxis("Vertical");
+			aclAxis += (aclAxis >= 0f) ? extraBoost : -extraBoost;
+			
             if (aclAxis > m_deadZone)
                 m_currThrust = aclAxis * m_forwardAcl;
             else if (aclAxis < -m_deadZone)
