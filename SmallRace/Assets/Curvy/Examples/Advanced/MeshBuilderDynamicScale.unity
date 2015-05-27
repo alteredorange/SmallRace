@@ -87,6 +87,7 @@ NavMeshSettings:
     cellSize: .166666657
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!43 &25750233
 Mesh:
   m_ObjectHideFlags: 0
@@ -215,6 +216,8 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+=======
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
 --- !u!1 &110537438
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +535,11 @@ MonoBehaviour:
     Sync: 0
     Tags: 
   ConnectedBy: []
+<<<<<<< HEAD
 --- !u!43 &372611111
+=======
+--- !u!43 &340885167
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -744,6 +751,137 @@ Behaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499708163}
   m_Enabled: 1
+<<<<<<< HEAD
+=======
+--- !u!43 &663225228
+Mesh:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Ngon
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 15
+    topology: 0
+    firstVertex: 0
+    vertexCount: 6
+    localAABB:
+      m_Center: {x: 7.4505806e-09, y: .0238728672, z: 0}
+      m_Extent: {x: .23776412, y: .226127133, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer: 000001000200000002000300000003000400000004000500000005000100
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 9
+    m_VertexCount: 6
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 120
+    _typelessdata: 0000000000000000000000000000003f0000003f000000000000803e000000000000003f0000803f7178733e79379e3d0000000038bc793fde8d273f1779163ebe1b4fbe000000008c3c4b3f0891c33d1a7916bebc1b4fbe00000000cc0d533e1091c33d707873be7e379e3d000000000079c83ce08d273f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 7.4505806e-09, y: .0238728672, z: 0}
+    m_Extent: {x: .23776412, y: .226127133, z: 0}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshOptimized: 0
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
 --- !u!1 &860451294
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,7 +1117,11 @@ MonoBehaviour:
   CapHollow: 0
   CapSegments: 5
   StartCap: 0
+<<<<<<< HEAD
   StartMesh: {fileID: 25750233}
+=======
+  StartMesh: {fileID: 663225228}
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
   EndCap: 0
   EndMesh: {fileID: 0}
   UV: 0
@@ -995,10 +1137,17 @@ MonoBehaviour:
   AutoRefresh: 1
   AutoRefreshSpeed: 0
   RefreshMeshCollider: 0
+<<<<<<< HEAD
   DebugPerfPrepare: 5.3411
   DebugPerfExtrude: .38549999999999995
   DebugPerfTime: 5.7265999999999995
   DebugPerfBuildTris: .014800000000000001
+=======
+  DebugPerfPrepare: 5.5541999999999998
+  DebugPerfExtrude: .36549999999999999
+  DebugPerfTime: 5.9196999999999997
+  DebugPerfBuildTris: .015100000000000001
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
 --- !u!43 &1359217541
 Mesh:
   m_ObjectHideFlags: 0
@@ -1362,7 +1511,11 @@ MonoBehaviour:
   CapHollow: 0
   CapSegments: 12
   StartCap: 0
+<<<<<<< HEAD
   StartMesh: {fileID: 372611111}
+=======
+  StartMesh: {fileID: 340885167}
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
   EndCap: 0
   EndMesh: {fileID: 0}
   UV: 0
@@ -1378,10 +1531,17 @@ MonoBehaviour:
   AutoRefresh: 1
   AutoRefreshSpeed: 0
   RefreshMeshCollider: 0
+<<<<<<< HEAD
   DebugPerfPrepare: 1.2301
   DebugPerfExtrude: .50449999999999995
   DebugPerfTime: 1.7345999999999999
   DebugPerfBuildTris: .038100000000000002
+=======
+  DebugPerfPrepare: 1.2995000000000001
+  DebugPerfExtrude: .48599999999999999
+  DebugPerfTime: 1.7855000000000001
+  DebugPerfBuildTris: .036200000000000003
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
 --- !u!43 &1401436739
 Mesh:
   m_ObjectHideFlags: 0

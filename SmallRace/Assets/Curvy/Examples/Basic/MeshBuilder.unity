@@ -87,6 +87,7 @@ NavMeshSettings:
     cellSize: .166666657
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!43 &25750233
 Mesh:
   m_ObjectHideFlags: 0
@@ -215,6 +216,8 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+=======
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
 --- !u!1 &39018703
 GameObject:
   m_ObjectHideFlags: 0
@@ -4013,6 +4016,137 @@ Transform:
   m_Children: []
   m_Father: {fileID: 252627912}
   m_RootOrder: 20
+<<<<<<< HEAD
+=======
+--- !u!43 &971470595
+Mesh:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    firstVertex: 0
+    vertexCount: 4
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 2, y: .25, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer: 000001000200020003000000
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 9
+    m_VertexCount: 4
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 80
+    _typelessdata: 000000c00000803e00000000000000000000803f000000400000803e000000000000803f0000803f00000040000080be000000000000803f00000000000000c0000080be000000000000000000000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 2, y: .25, z: 0}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshOptimized: 0
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
 --- !u!1 &973983099
 GameObject:
   m_ObjectHideFlags: 0
@@ -4320,7 +4454,11 @@ MonoBehaviour:
   CapHollow: 0
   CapSegments: 9
   StartCap: 1
+<<<<<<< HEAD
   StartMesh: {fileID: 25750233}
+=======
+  StartMesh: {fileID: 971470595}
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
   EndCap: 1
   EndMesh: {fileID: 0}
   UV: 2
@@ -4336,10 +4474,17 @@ MonoBehaviour:
   AutoRefresh: 1
   AutoRefreshSpeed: 0
   RefreshMeshCollider: 0
+<<<<<<< HEAD
   DebugPerfPrepare: 4.9513999999999996
   DebugPerfExtrude: 1.3973
   DebugPerfTime: 6.3486999999999991
   DebugPerfBuildTris: .084500000000000006
+=======
+  DebugPerfPrepare: 5.1521999999999997
+  DebugPerfExtrude: 1.5741999999999998
+  DebugPerfTime: 6.7263999999999999
+  DebugPerfBuildTris: .083599999999999994
+>>>>>>> 255fec5d361c7e3c561c947bcc5e12d04de1b0c1
 --- !u!1 &1023132866
 GameObject:
   m_ObjectHideFlags: 0
