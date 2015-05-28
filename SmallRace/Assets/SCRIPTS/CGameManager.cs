@@ -74,7 +74,28 @@ public class CGameManager : MonoBehaviour {
             m_LocalObj.GetComponent<CCar>().m_Player = m_Players[m_LocalID];
             m_LocalObj.GetComponent<CCar>().OnRestart();
             GameObject.Find("IPT").GetComponent<UnityEngine.UI.Text>().text = Network.player.ipAddress;
+
+            MasterServer.RegisterHost("SmallRace2", Random.Range(100, 999).ToString());
         }
+    }
+
+    void OnFailedToConnectToMasterServer(NetworkConnectionError info)
+    {
+        Debug.LogError("Could not connect to master server: " + info);
+    }
+    void OnMasterServerEvent(MasterServerEvent msEvent)
+    {
+        if (msEvent == MasterServerEvent.HostListReceived)
+            return;
+        else if (msEvent == MasterServerEvent.RegistrationSucceeded)
+            Debug.Log("RegistrationSucceeded!");
+        else if (Network.isServer)
+            MasterServer.RegisterHost("SmallRace2", Random.Range(100, 999).ToString());
+    }
+    void OnApplicationQuit()
+    {
+        if (Network.isServer)
+            MasterServer.UnregisterHost();
     }
 
     void Update()
@@ -101,16 +122,22 @@ public class CGameManager : MonoBehaviour {
         LAP_COUNTER.text = Lap + " / " + m_LapsNeeded;
     }
 
-    void OnPlayerConnected(NetworkPlayer netPlayer)
+    IEnumerator OnPlayerConnected(NetworkPlayer netPlayer)
     {
         int i = 0;
         for (; i < 6; i++)
             if (m_Players[i] == null)
                 break;
         if (i == 0) // no slot
-            return;
+            yield break;
         SubmitPlayer(i, netPlayer);
         NetView.RPC("Server_Info", netPlayer, i);
+        yield return new WaitForSeconds(1f);
+        if (PlayerNum() == Network.maxConnections)
+        {
+            NetView.RPC("Server_Start", RPCMode.All);
+            MasterServer.UnregisterHost();
+        }
     }
     void OnPlayerDisconnected(NetworkPlayer netPlayer)
     {
@@ -137,7 +164,7 @@ public class CGameManager : MonoBehaviour {
         string strToSend = "Stats:\n";
         for (int i = 0; i < 6; i++)
             if (m_PlayerStats[i] != null)
-                strToSend += m_PlayerStats[i].Rank + ". " + m_PlayerStats[i].Name + "\t" + CGlobal.FormatTime(m_PlayerStats[i].Time) + "\n";
+                strToSend += (m_PlayerStats[i].Rank+1).ToString() + ". " + m_PlayerStats[i].Name + "\t" + CGlobal.FormatTime(m_PlayerStats[i].Time) + "\n";
         NetView.RPC("Server_ShowStat", RPCMode.All, strToSend);
         yield return new WaitForSeconds(3f);
         RestartGame();
@@ -165,7 +192,7 @@ public class CGameManager : MonoBehaviour {
     }
 
     [RPC]
-    public void Client_Finish(float time, NetworkMessageInfo info, int ID = -1)
+    public void Client_Finish(float time, int ID, NetworkMessageInfo info)
     {
         int id = GetPlayerID(info.sender);
         if (ID != -1)

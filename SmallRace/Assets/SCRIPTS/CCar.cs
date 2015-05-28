@@ -182,9 +182,9 @@ public class CCar : MonoBehaviour {
             {
                 NetworkMessageInfo a = new NetworkMessageInfo();
                 if (Network.isServer)
-                    CGameManager.ins.Client_Finish(CGameManager.ins.m_TimePassed, a, 0);
+                    CGameManager.ins.Client_Finish(CGameManager.ins.m_TimePassed, 0, a);
                 else
-                    CGameManager.ins.NetView.RPC("Client_Finish", RPCMode.Server, CGameManager.ins.m_TimePassed);
+                    CGameManager.ins.NetView.RPC("Client_Finish", RPCMode.Server, CGameManager.ins.m_TimePassed, -1);
                 m_CanMove = false;
             }
         }
