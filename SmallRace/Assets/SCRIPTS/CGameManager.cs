@@ -55,8 +55,19 @@ public class CGameManager : MonoBehaviour {
 
     float m_NextPlayersUpdate = 0f;
 
+
+	void Start()
+	{
+	
+	}
+
     void Awake()
     {
+		Network.natFacilitatorIP = "104.236.179.57";
+		Network.natFacilitatorPort = 50005;
+		MasterServer.ipAddress = "104.236.179.57";
+		MasterServer.port = 23466;
+		
         ins = this;
         NetView = GetComponent<NetworkView>();
         for (int i = 0; i < 6; i++)
@@ -75,7 +86,7 @@ public class CGameManager : MonoBehaviour {
             m_LocalObj.GetComponent<CCar>().OnRestart();
             GameObject.Find("IPT").GetComponent<UnityEngine.UI.Text>().text = Network.player.ipAddress;
 
-            MasterServer.RegisterHost("SmallRace2", Random.Range(100, 999).ToString());
+            MasterServer.RegisterHost("RaceScene", Random.Range(100, 999).ToString());
         }
     }
 
@@ -89,8 +100,9 @@ public class CGameManager : MonoBehaviour {
             return;
         else if (msEvent == MasterServerEvent.RegistrationSucceeded)
             Debug.Log("RegistrationSucceeded!");
+
         else if (Network.isServer)
-            MasterServer.RegisterHost("SmallRace2", Random.Range(100, 999).ToString());
+            MasterServer.RegisterHost("RaceScene", Random.Range(100, 999).ToString());
     }
     void OnApplicationQuit()
     {
@@ -133,7 +145,8 @@ public class CGameManager : MonoBehaviour {
         SubmitPlayer(i, netPlayer);
         NetView.RPC("Server_Info", netPlayer, i);
         yield return new WaitForSeconds(1f);
-        if (PlayerNum() == Network.maxConnections)
+        if (PlayerNum() == 2)
+		    //Network.maxConnections)
         {
             NetView.RPC("Server_Start", RPCMode.All);
             MasterServer.UnregisterHost();
@@ -175,6 +188,7 @@ public class CGameManager : MonoBehaviour {
     void Server_Start()
     {
         m_LocalObj.GetComponent<CCar>().m_CanMove = true;
+
     }
     [RPC]
     void Server_ShowStat(string str)

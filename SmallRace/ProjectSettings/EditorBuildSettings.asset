@@ -11,7 +11,7 @@ EditorBuildSettings:
     path: Assets/SimpleMap.unity
   - enabled: 1
     path: Assets/MenuTrack4.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Track4.unity
   - enabled: 1
     path: Assets/Track1.unity
