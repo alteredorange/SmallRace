@@ -46,242 +46,78 @@ public class CGameManager : MonoBehaviour {
     public int m_LapsNeeded;
     public int m_CheckpointsNeeded;
     public Transform[] m_SpawnPoints;
+	private int m_SpawnedPlayers = 0;
     [HideInInspector] public NetworkView NetView;
     [HideInInspector] public CPlayer[] m_Players = new CPlayer[6];
     [HideInInspector] public CPlayerStat[] m_PlayerStats = new CPlayerStat[6];
+	GameObject[] m_Cars;
+	int m_myNumber;
     int m_StatCounter = 0;
     public static int m_LocalID = -1;
     public static GameObject m_LocalObj;
 
-    float m_NextPlayersUpdate = 0f;
-
-
-	void Start()
-	{
-	
-	}
-
     void Awake()
     {
-		Network.natFacilitatorIP = "104.236.179.57";
-		Network.natFacilitatorPort = 50005;
-		MasterServer.ipAddress = "104.236.179.57";
-		MasterServer.port = 23466;
-		
-        ins = this;
-        NetView = GetComponent<NetworkView>();
-        for (int i = 0; i < 6; i++)
-        {
-            m_Players[i] = null;
-            m_PlayerStats[i] = null;
-        }
-        if (Network.isServer)
-        {
-            m_LocalID = 0;
-            OnLap(0);
-            SubmitPlayer(0, Network.player);
-            m_LocalObj = (GameObject)Network.Instantiate(CarPrefab, Vector3.down * 200, Quaternion.identity, 0);
-            m_LocalObj.transform.position = m_SpawnPoints[m_LocalID].position;
-            m_LocalObj.GetComponent<CCar>().m_Player = m_Players[m_LocalID];
-            m_LocalObj.GetComponent<CCar>().OnRestart();
-            GameObject.Find("IPT").GetComponent<UnityEngine.UI.Text>().text = Network.player.ipAddress;
+		if (Network.isServer) {
+			m_Cars = new GameObject[HostOptions.MaxRacers];
+		}
 
-            MasterServer.RegisterHost("RaceScene", Random.Range(100, 999).ToString());
-        }
-    }
+		NetView = GetComponent<NetworkView> ();
 
-    void OnFailedToConnectToMasterServer(NetworkConnectionError info)
-    {
-        Debug.LogError("Could not connect to master server: " + info);
-    }
-    void OnMasterServerEvent(MasterServerEvent msEvent)
-    {
-        if (msEvent == MasterServerEvent.HostListReceived)
-            return;
-        else if (msEvent == MasterServerEvent.RegistrationSucceeded)
-            Debug.Log("RegistrationSucceeded!");
+		//since we aren't using a dedicated server we need to instantiate a racer for the srever's client
+		RequestInstatiation();
+	}
 
-        else if (Network.isServer)
-            MasterServer.RegisterHost("RaceScene", Random.Range(100, 999).ToString());
-    }
-    void OnApplicationQuit()
-    {
-        if (Network.isServer)
-            MasterServer.UnregisterHost();
-    }
+	void RequestInstatiation()
+	{
+		NetView.RPC("HandleInstantiation", RPCMode.Server);
+	}
 
-    void Update()
-    {
-        if (Network.isServer)
-        {
-            if (Time.time > m_NextPlayersUpdate)
-            {
-                for (int i = 0; i < 6; i++)
-                {
-                    if (m_Players[i] != null)
-                    {
-                        NetView.RPC("Server_UpdatePlayer", RPCMode.Others, i, m_Players[i].m_Name, m_Players[i].m_Score);
-                    }
-                }
-                m_NextPlayersUpdate = Time.time + 0.2f;
-            }
-        }
-        TIME_COUNTER.text = (m_TimePassed == -1) ? "" : CGlobal.FormatTime(m_TimePassed);
-    }
+	void ServerStartCountdown()
+	{
+		if (Network.isServer){
+			return;
+		}
+	}
 
-    public void OnLap(int Lap)
-    {
-        LAP_COUNTER.text = Lap + " / " + m_LapsNeeded;
-    }
+	// Client RPCs
+	[RPC]
+	void RecieveViewID(NetworkViewID Id, int RacerNumber)
+	{
+		//use network id to find gameobject for things like attaching the camera
+		m_LocalObj = NetworkView.Find(Id).gameObject;
+		m_myNumber = RacerNumber;
+	}
 
-    IEnumerator OnPlayerConnected(NetworkPlayer netPlayer)
-    {
-        int i = 0;
-        for (; i < 6; i++)
-            if (m_Players[i] == null)
-                break;
-        if (i == 0) // no slot
-            yield break;
-        SubmitPlayer(i, netPlayer);
-        NetView.RPC("Server_Info", netPlayer, i);
-        yield return new WaitForSeconds(1f);
-        if (PlayerNum() == 2)
-		    //Network.maxConnections)
-        {
-            NetView.RPC("Server_Start", RPCMode.All);
-            MasterServer.UnregisterHost();
-        }
-    }
-    void OnPlayerDisconnected(NetworkPlayer netPlayer)
-    {
-        int id = GetPlayerID(netPlayer);
-        if (id == -1)
-            return;
-        Network.DestroyPlayerObjects(netPlayer);
-        m_Players[id] = null;
-        NetView.RPC("Server_RemovePlayer", RPCMode.Others, id);
-    }
+	//Server RPCs
+	[RPC]
+	void HandleInstantiation(NetworkMessageInfo info)
+	{
+		if (Network.isServer) {
+			//make sure there are available spawn points
+			if(m_SpawnedPlayers < m_SpawnPoints.Length)
+			{
+				GameObject spawnPoint;
+				GameObject newRacer;
+				NetworkViewID viewID;
 
-    void RestartGame()
-    {
-        if (!Network.isServer)
-            return;
-        for (int i = 0; i < 6; i++)
-            m_PlayerStats[i] = null;
-        m_StatCounter = 0;
+				//make sure the spawn point is populated
+				if(m_SpawnPoints[m_SpawnedPlayers] == null)
+				{
+					Debug.LogError("Spawn points not set! Please use the editor to set CGameManager's spawnPoints.");
+					return;
+				}
 
-        NetView.RPC("Server_Restart", RPCMode.All);
-    }
-    IEnumerator RestartTheGame()
-    {
-        string strToSend = "Stats:\n";
-        for (int i = 0; i < 6; i++)
-            if (m_PlayerStats[i] != null)
-                strToSend += (m_PlayerStats[i].Rank+1).ToString() + ". " + m_PlayerStats[i].Name + "\t" + CGlobal.FormatTime(m_PlayerStats[i].Time) + "\n";
-        NetView.RPC("Server_ShowStat", RPCMode.All, strToSend);
-        yield return new WaitForSeconds(3f);
-        RestartGame();
-    }
+				spawnPoint = m_SpawnPoints[m_SpawnedPlayers];
+				newRacer = Network.Instantiate(CarPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
 
-    // RPCs
-    [RPC]
-    void Server_Start()
-    {
-        m_LocalObj.GetComponent<CCar>().m_CanMove = true;
+				viewID = newRacer.GetComponent<NetworkView>().viewID;
 
-    }
-    [RPC]
-    void Server_ShowStat(string str)
-    {
-        StatsHolder.SetActive(true);
-        StatsHolder.transform.FindChild("Text").GetComponent<Text>().text = str;
-    }
-    [RPC]
-    void Server_Restart()
-    {
-        m_TimePassed = 0;
-        StatsHolder.SetActive(false);
-        foreach (CCar car in GameObject.FindObjectsOfType<CCar>())
-            car.OnRestart();
-    }
+				NetView.RPC("RecieveViewID", info.sender, viewID, m_SpawnedPlayers);
 
-    [RPC]
-    public void Client_Finish(float time, int ID, NetworkMessageInfo info)
-    {
-        int id = GetPlayerID(info.sender);
-        if (ID != -1)
-            id = ID;
-        if (id == -1)
-            return;
-        m_PlayerStats[m_StatCounter] = new CPlayerStat();
-        m_PlayerStats[m_StatCounter].Name = m_Players[id].m_Name;
-        m_PlayerStats[m_StatCounter].Time = time;
-        m_PlayerStats[m_StatCounter].Rank = m_StatCounter;
-        m_StatCounter++;
+				m_SpawnedPlayers++;
+			}
+		}
+	}
 
-        if (m_StatCounter >= PlayerNum())
-        {
-            StartCoroutine(RestartTheGame());
-        }
-    }
-
-    [RPC]
-    void Server_UpdatePlayer(int ID, string Name, int Score)
-    {
-        if (m_Players[ID] == null)
-            m_Players[ID] = new CPlayer();
-        m_Players[ID].m_ID = ID;
-        m_Players[ID].m_Name = Name;
-        m_Players[ID].m_Score = Score;
-    }
-    [RPC]
-    void Server_RemovePlayer(int ID)
-    {
-        m_Players[ID] = null;
-    }
-    [RPC]
-    void Server_Info(int ID)
-    {
-        if (m_Players[ID] == null)
-            SubmitPlayer(ID, Network.player);
-        m_LocalID = ID;
-        m_LocalObj = (GameObject)Network.Instantiate(CarPrefab, Vector3.down * 200, Quaternion.identity, 0);
-        m_LocalObj.transform.position = m_SpawnPoints[m_LocalID].position;
-        m_LocalObj.GetComponent<CCar>().m_Player = m_Players[ID];
-        m_LocalObj.GetComponent<CCar>().OnRestart();
-        OnLap(0);
-    }
-
-    // Helper Functions
-    void SubmitPlayer(int ID, NetworkPlayer netPlayer)
-    {
-        m_Players[ID] = new CPlayer();
-        m_Players[ID].m_ID = ID;
-        m_Players[ID].m_NetPlayer = netPlayer;
-    }
-    public int GetPlayerID(NetworkPlayer netPlayer)
-    {
-        int ID = -1;
-        for (int i = 0; i < 6; i++)
-            if (m_Players[i] != null && m_Players[i].m_NetPlayer == netPlayer)
-                ID = i;
-        return ID;
-    }
-    public int PlayerNum()
-    {
-        int num = 0;
-        for (int i = 0; i < 6; i++)
-            if (m_Players[i] != null)
-                num++;
-        return num;
-    }
-
-
-    // Button Functions
-    public void OnStartClick()
-    {
-        if (!Network.isServer)
-            return;
-        NetView.RPC("Server_Start", RPCMode.All);
-    }
 }

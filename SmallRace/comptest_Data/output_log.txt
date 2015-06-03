@@ -2,34 +2,114 @@ Initialize engine version: 5.0.2f1 (0b02744d4013)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GT 440 (ID=0xdc0)
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
     Vendor:   NVIDIA
-    VRAM:     1483 MB
+    VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\poly2tri.dll (this message is harmless)
-Loading C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\poly2tri.dll into Unity Child Domain
-Platform assembly: C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.051 seconds
-desktop: 1680x1050 59Hz; virtual: 2960x1127 at -1280,0
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\poly2tri.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\poly2tri.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.061 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Kyle\Documents\GitHub\SmallRace\SmallRaceGit\SmallRace\comptest_Data\Managed\System.dll (this message is harmless)
+Initialize engine version: 5.0.2f1 (0b02744d4013)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\poly2tri.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\poly2tri.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.053 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 19d8 -> priority: 1 
-  Thread -> id: 1db4 -> priority: 1 
+  Thread -> id: 1b24 -> priority: 1 
+  Thread -> id: 1a20 -> priority: 1 
+Connected to master server at 104.236.179.57:23466
+ 
+(Filename:  Line: 2493)
+
+Incoming host list query response from master server.
+ 
+(Filename:  Line: 2493)
+
+<RI> Initialized touch support.
+Initialize engine version: 5.0.2f1 (0b02744d4013)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\poly2tri.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\poly2tri.dll into Unity Child Domain
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.057 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 15e8 -> priority: 1 
+  Thread -> id: 1a28 -> priority: 1 
+Connected to master server at 104.236.179.57:23466
+ 
+(Filename:  Line: 2493)
+
+Incoming host list query response from master server.
+ 
+(Filename:  Line: 2493)
+
+<RI> Initialized touch support.
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\DevinW\Documents\GitHub\SmallRace\SmallRace\comptest_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 614 -> priority: 1 
+  Thread -> id: bd4 -> priority: 1 
 Connected to master server at 104.236.179.57:23466
  
 (Filename:  Line: 2493)
@@ -63,7 +143,7 @@ Attempting to connect to master server at 104.236.179.57:23466
 (Filename:  Line: 2493)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.657328 ms
+UnloadTime: 3.043236 ms
 Allocating view ID AllocatedID: 1.
 
  
@@ -80,7 +160,447 @@ Added RPC '__RPCNetworkInstantiate' to buffer.
 
 
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1196.
-Total: 0.372192 ms (FindLiveObjects: 0.076974 ms CreateObjectMapping: 0.040449 ms MarkObjects: 0.242393 ms  DeleteObjects: 0.011772 ms)
+Total: 0.501757 ms (FindLiveObjects: 0.113428 ms CreateObjectMapping: 0.054582 ms MarkObjects: 0.306171 ms  DeleteObjects: 0.026438 ms)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Connected to facilitator at 104.236.179.57:50005
+
+ 
+(Filename:  Line: 2493)
+
+Connected to master server at 104.236.179.57:23466
+ 
+(Filename:  Line: 2493)
+
+Received identifier 0 from master server
+ 
+(Filename:  Line: 2493)
+
+RegistrationSucceeded!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+hi1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+hi2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Incoming host list query response from master server.
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+hi3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Found Some Games
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Game Here
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Running as client. No player ID set yet.
+ 
+(Filename:  Line: 2493)
+
+Connected to 192.168.1.66:26988
+
+ 
+(Filename:  Line: 2493)
+
+New connection established (192.168.1.66:65467)
+ 
+(Filename:  Line: 2493)
+
+New scope index 0 is now in scope for AllocatedID: 0
+ 
+(Filename:  Line: 2493)
+
+New scope index 0 is now in scope for SceneID: 1 Level Prefix: 0
+ 
+(Filename:  Line: 2493)
+
+New scope index 0 is now in scope for AllocatedID: 1
+ 
+(Filename:  Line: 2493)
+
+Sent initalization to player 1
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Is client? True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Set player ID to 1
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.981263 ms
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1159.
+Total: 0.487827 ms (FindLiveObjects: 0.079598 ms CreateObjectMapping: 0.060552 ms MarkObjects: 0.334599 ms  DeleteObjects: 0.012508 ms)
+
+Allocating view ID AllocatedID: 150.
+
+ 
+(Filename:  Line: 2493)
+
+New scope index 0 is now in scope for AllocatedAD: 150
+ 
+(Fildndmed   inPC  __RPCNe
+t
+workInstantiate' to buffer.
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_Start' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+hi1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+hi2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Incoming host list query response from master server.
+ 
+(Filename:  Line: 2493)
+
+hi3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Found Some Games
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Game Here
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Running as client. No player ID set yet.
+ 
+(Filename:  Line: 2493)
+
+The system we attempted to connect to is not accepting new connections.
+ 
+(Filename:  Line: 637)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+You may not be connected when initializing security layer.
+ 
+(Filename:  Line: 196)
+
+Running as server. Player ID is 0.
+ 
+(Filename:  Line: 2493)
+
+Attempting to connect to master server at 104.236.179.57:23466
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+UnloadTime: 4.068641 ms
+Allocating view ID AllocatedID: 1.
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call '__RPCNetworkInstantiate' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Added RPC '__RPCNetworkInstantiate' to buffer.
+ 
+(Filename:  Line: 2493)
+
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1196.
+Total: 0.525637 ms (FindLiveObjects: 0.077040 ms CreateObjectMapping: 0.057424 ms MarkObjects: 0.377526 ms  DeleteObjects: 0.013076 ms)
 
 Sent RPC call 'Server_UpdatePlayer' to all connected clients
 
@@ -714,37 +1234,13 @@ Sent RPC call 'Server_UpdatePlayer' to all connected clients
  
 (Filename:  Line: 2493)
 
-Successfully accepted NAT punchthrough connection from 172.56.38.132:63914
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
 
  
 (Filename:  Line: 2493)
 
 Sent RPC call 'Server_UpdatePlayer' to all connected clients
 
- 
-(Filename:  Line: 2493)
-
-New connection established (172.56.38.132:63914)
- 
-(Filename:  Line: 2493)
-
-New scope index 0 is now in scope for AllocatedID: 0
- 
-(Filename:  Line: 2493)
-
-New scope index 0 is now in scope for SceneID: 1 Level Prefix: 0
- 
-(Filename:  Line: 2493)
-
-New scope index 0 is now in scope for AllocatedID: 1
- 
-(Filename:  Line: 2493)
-
-Sent initalization to player 1
- 
-(Filename:  Line: 2493)
-
-Sent host update to master server with identifier 0
  
 (Filename:  Line: 2493)
 
@@ -758,13 +1254,590 @@ Sent RPC call 'Server_UpdatePlayer' to all connected clients
  
 (Filename:  Line: 2493)
 
-Received identifier 0 from master server
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
  
 (Filename:  Line: 2493)
 
-RegistrationSucceeded!
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
 
 Sent RPC call 'Server_UpdatePlayer' to all connected clients
 
@@ -841,7 +1914,418 @@ Sent RPC call 'Server_UpdatePlayer' to all connected clients
  
 (Filename:  Line: 2493)
 
-Added RPC '__RPCNetworkInstantiate' to buffer.
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
  
 (Filename:  Line: 2493)
 
@@ -1261,6 +2745,268 @@ Sent RPC call 'Server_UpdatePlayer' to all connected clients
 (Filename:  Line: 2493)
 
 Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+Sent RPC call 'Server_UpdatePlayer' to all connected clients
+
+ 
+(Filename:  Line: 2493)
+
+A client has disconnected from this server. Player ID 1, IP 192.168.1.66:65467
+ 
+(Filename:  Line: 2493)
+
+Destroying objects belonging to player 1
+ 
+(Filename:  Line: 2493)
+
+Destroying object with view ID 'AllocatedID: 150'
+ 
+(Filename:  Line: 1388)
+
+Sent RPC call 'Server_RemovePlayer' to all connected clients
 
  
 (Filename:  Line: 2493)

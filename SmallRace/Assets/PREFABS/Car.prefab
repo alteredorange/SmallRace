@@ -191,8 +191,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraOffset: {x: 0, y: -2, z: 6}
-  maxSpeed: 30
-  Accel: 6
+  m_hoverForce: 9
+  m_hoverHeight: 2
+  m_hoverPoints: []
+  m_forwardAcl: 100
+  m_backwardAcl: 25
+  m_turnStrength: 10
+  m_leftAirBrake: {fileID: 0}
+  m_rightAirBrake: {fileID: 0}
+  m_Laps: 0
+  m_CanMove: 0
 --- !u!148 &14873438
 NetworkView:
   m_ObjectHideFlags: 1
@@ -201,7 +209,7 @@ NetworkView:
   m_GameObject: {fileID: 159690}
   m_Enabled: 1
   m_StateSynchronization: 2
-  m_Observed: {fileID: 11406318}
+  m_Observed: {fileID: 444320}
   m_ViewID:
     m_ID: 0
     m_Type: 0
