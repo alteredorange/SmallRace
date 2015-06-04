@@ -169,6 +169,7 @@
      <Compile Include="Assets\SCRIPTS\CGameManager.cs" />
      <Compile Include="Assets\SCRIPTS\CGlobal.cs" />
      <Compile Include="Assets\SCRIPTS\HostOptions.cs" />
+     <Compile Include="Assets\SCRIPTS\InputSerializer.cs" />
      <Compile Include="Assets\SCRIPTS\JoinGame.cs" />
      <Compile Include="Assets\SCRIPTS\MenuManager.cs" />
      <Compile Include="Assets\SCRIPTS\OnlineLobby.cs" />

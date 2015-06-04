@@ -1156,6 +1156,7 @@ MonoBehaviour:
   - {fileID: 1106509644}
   - {fileID: 257764247}
   NetView: {fileID: 0}
+  InputPrefab: {fileID: 182324, guid: fa9e89a062c9ffe47a10b512cdb651a7, type: 2}
 --- !u!4 &270373902
 Transform:
   m_ObjectHideFlags: 0

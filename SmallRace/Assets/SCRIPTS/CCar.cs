@@ -52,6 +52,33 @@ public class CCar : MonoBehaviour {
     Quaternion rotGot;
     Quaternion rotGotVel;
 
+	InputSerializer m_InputSerializer = null;
+	bool updateCamera = false;
+
+	public Rigidbody RigidBody {
+		get {
+			return rb;
+		}
+	}
+
+	public InputSerializer InputSerializer {
+		get {
+			return m_InputSerializer;
+		}
+		set {
+			m_InputSerializer = value;
+		}
+	}
+
+	public bool UpdateCamera {
+		get {
+			return updateCamera;
+		}
+		set {
+			updateCamera = value;
+		}
+	}
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -101,46 +128,48 @@ public class CCar : MonoBehaviour {
     }
     void Movement()
     {
-        /*rb.velocity = transform.forward * m_Speed;
-        m_Speed = Mathf.Clamp(m_Speed + InputY * Time.deltaTime * Accel, -maxSpeed/2f, maxSpeed);
-        if (InputY == 0)
-            m_Speed *= 0.99f;
-        transform.Rotate(0, InputX * 65 * Time.deltaTime, 0);*/
-        RaycastHit hit;
-        for (int i = 0; i < m_hoverPoints.Length; i++)
-        {
-            var hoverPoint = m_hoverPoints[i];
-            if (Physics.Raycast(hoverPoint.transform.position,
-                                -Vector3.up, out hit,
-                                m_hoverHeight,
-                                m_layerMask))
-                rb.AddForceAtPosition(Vector3.up
-                  * m_hoverForce
-                  * (1.0f - (hit.distance / m_hoverHeight)),
-                                          hoverPoint.transform.position);
-            else
-            {
-                if (transform.position.y > hoverPoint.transform.position.y)
-                    rb.AddForceAtPosition(
-                      hoverPoint.transform.up * m_hoverForce,
-                      hoverPoint.transform.position);
-                else
-                    rb.AddForceAtPosition(
-                      hoverPoint.transform.up * -m_hoverForce,
-                      hoverPoint.transform.position);
-            }
-        }
-        if (!m_CanMove)
-            return;
-        // Forward
-        if (Mathf.Abs(m_currThrust) > 0)
-            rb.AddForce(transform.forward * m_currThrust);
+		//the server is going to handle the hover code
+		if (Network.isServer) {
+			RaycastHit hit;
+			for (int i = 0; i < m_hoverPoints.Length; i++) {
+				var hoverPoint = m_hoverPoints [i];
+				if (Physics.Raycast (hoverPoint.transform.position,
+			                    -Vector3.up, out hit,
+			                    m_hoverHeight,
+			                    m_layerMask))
+					rb.AddForceAtPosition (Vector3.up
+						* m_hoverForce
+						* (1.0f - (hit.distance / m_hoverHeight)),
+				                      hoverPoint.transform.position);
+				else {
+					if (transform.position.y > hoverPoint.transform.position.y)
+						rb.AddForceAtPosition (
+						hoverPoint.transform.up * m_hoverForce,
+						hoverPoint.transform.position);
+					else
+						rb.AddForceAtPosition (
+						hoverPoint.transform.up * -m_hoverForce,
+						hoverPoint.transform.position);
+				}
+			}
+		}
+
+		if (!m_CanMove || m_InputSerializer == null)
+			return;
+		
+		// Forward
+		if (Mathf.Abs (m_currThrust) > 0)
+			m_InputSerializer.BufferForwardForce (transform.forward * m_currThrust);
+		else
+			m_InputSerializer.BufferForwardForce(Vector3.zero);
 
         // Turn
         if (m_currTurn > 0)
-            rb.AddRelativeTorque(Vector3.up * m_currTurn * m_turnStrength);
-        else if (m_currTurn < 0)
-            rb.AddRelativeTorque(Vector3.up * m_currTurn * m_turnStrength);
+			m_InputSerializer.BufferTurningForce (Vector3.up * m_currTurn * m_turnStrength);
+		else if (m_currTurn < 0)
+			m_InputSerializer.BufferTurningForce (Vector3.up * m_currTurn * m_turnStrength);
+		else
+			m_InputSerializer.BufferTurningForce(Vector3.zero);
     }
 
     public void OnRestart()
@@ -208,7 +237,7 @@ public class CCar : MonoBehaviour {
                 part.Emit((int)(200 * Time.deltaTime));
         }*/
 
-        if (NetView.isMine)
+        if (m_InputSerializer != null)//if true then this car belongs to this player
         {
             /*InputX = Input.GetAxis("Horizontal");
             InputY = Input.GetAxisRaw("Vertical");
@@ -244,54 +273,39 @@ public class CCar : MonoBehaviour {
                 m_currTurn *= -1;
         }
     }
+
     void FixedUpdate()
     {
-        if (m_Player == null)
-            return;
+		if(updateCamera)
+			CameraFollow();
 
-        if (NetView.isMine)
-        {
-            Movement();
-            CameraFollow();
-        }
-        else
-        {
-            rb.position = Vector3.SmoothDamp(rb.position, posGot, ref posGotVel, 0.1f);
-            rb.rotation = Quaternion.Lerp(rb.rotation, rotGot, 10 * Time.deltaTime);
-        }
+		Movement();
     }
 
-    void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
-    {
-        int ID = -1;
-        Vector3 Pos = Vector3.zero;
-        Vector3 Vel = Vector3.zero;
-        Quaternion Rot = Quaternion.identity;
-        int forward = 0;
+	private void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	{
+		if (stream.isWriting) {
+			Vector3 vec = transform.position;
+			Quaternion qua = transform.rotation;
+			stream.Serialize(ref vec);
+			stream.Serialize(ref qua);
+			Debug.Log ("Sending player #" + NetView.viewID);
+		} else if (stream.isReading) {
+			Vector3 vec = Vector3.zero;
+			Quaternion qua = Quaternion.identity;
+			stream.Serialize(ref vec);
+			stream.Serialize(ref qua);
+			rb.position = Vector3.SmoothDamp(rb.position, vec, ref posGotVel, 1 / 30);
+			rb.rotation = Quaternion.Lerp(rb.rotation, qua, 0.5f);
+			Debug.Log ("Reading player #" + NetView.viewID);
+		}
+	}
 
-        if (stream.isWriting)
-        {
-            ID = m_Player.m_ID;
-            Pos = rb.position;
-            Vel = rb.velocity;
-            Rot = transform.rotation;
-            forward = (int)InputY;
-        }
-
-        stream.Serialize(ref ID);
-        stream.Serialize(ref Pos);
-        stream.Serialize(ref Vel);
-        stream.Serialize(ref Rot);
-        stream.Serialize(ref m_currThrust);
-        
-        if (stream.isReading)
-        {
-            m_Player = CGameManager.ins.m_Players[ID];
-            posGot = Pos;
-            rb.velocity = Vel;
-            rotGot = Rot;
-            m_currThrust = forward;
-        }
-    }
+	public void OnNetworkInstantiate (NetworkMessageInfo info)
+	{
+		if (Network.isClient) {
+			rb.isKinematic = true;
+		}
+	}
 
 }

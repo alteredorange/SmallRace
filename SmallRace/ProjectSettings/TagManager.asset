@@ -7,6 +7,7 @@ TagManager:
   - EndLap
   - CheckPoint
   - Boost
+  - NetworkedInput
   layers:
   - Default
   - TransparentFX

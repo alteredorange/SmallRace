@@ -8,13 +8,10 @@ public class OnlineLobby : MonoBehaviour {
 
 	public void Awake()
 	{
-		GameObject networkViewObject = GameObject.Find ("NetworkViewObject");
-		if (networkViewObject != null) {
-			m_networkView = networkViewObject.GetComponent<NetworkView> ();
+		m_networkView = gameObject.GetComponent<NetworkView>();
 			//if(Network.peerType == NetworkPeerType.Client || Network.peerType == NetworkPeerType.Connecting)
 			//	m_networkView.viewID = Network.AllocateViewID();
-		}
-		else
+		if(m_networkView == null)
 			AddNetworkView();
 	}
 	

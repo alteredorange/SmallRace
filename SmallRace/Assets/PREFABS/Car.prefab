@@ -200,7 +200,7 @@ MonoBehaviour:
   m_leftAirBrake: {fileID: 0}
   m_rightAirBrake: {fileID: 0}
   m_Laps: 0
-  m_CanMove: 0
+  m_CanMove: 1
 --- !u!148 &14873438
 NetworkView:
   m_ObjectHideFlags: 1
@@ -209,7 +209,7 @@ NetworkView:
   m_GameObject: {fileID: 159690}
   m_Enabled: 1
   m_StateSynchronization: 2
-  m_Observed: {fileID: 444320}
+  m_Observed: {fileID: 11406318}
   m_ViewID:
     m_ID: 0
     m_Type: 0
