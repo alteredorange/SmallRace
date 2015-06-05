@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AIFloat.cs" />
      <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\AdvancedExamples\AutoSelect\MultiLayerTouch.cs" />
      <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\AdvancedExamples\AutoSelect\MultiLayerUI.cs" />
      <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\AdvancedExamples\MultiCamera\MultiCameraTouch.cs" />
@@ -113,7 +112,7 @@
      <Compile Include="Assets\Game\Networking\RestarterNew.cs" />
      <Compile Include="Assets\Hover\HoverCarControl.cs" />
      <Compile Include="Assets\Hover\HoverFollowCam.cs" />
-     <Compile Include="Assets\SCRIPTS\AICar.cs" />
+     <Compile Include="Assets\SCRIPTS\AIFloat.cs" />
      <Compile Include="Assets\SCRIPTS\CCar.cs" />
      <Compile Include="Assets\SCRIPTS\CContext.cs" />
      <Compile Include="Assets\SCRIPTS\CGameManager.cs" />
