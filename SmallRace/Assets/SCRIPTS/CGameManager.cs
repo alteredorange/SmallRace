@@ -137,7 +137,7 @@ public class CGameManager : MonoBehaviour {
 		m_LocalObj = NetworkView.Find(Id).gameObject;
 		m_myNumber = RacerNumber;
 
-		car = m_LocalObj.GetComponent<CCar> ();
+	    car = m_LocalObj.GetComponent<CCar> ();
 		car.UpdateCamera = true;
 		car.InputSerializer = ((GameObject)Network.Instantiate(InputPrefab, Vector3.zero, Quaternion.identity, 0)).GetComponent<InputSerializer>();
 		car.InputSerializer.Initialize(m_myNumber);

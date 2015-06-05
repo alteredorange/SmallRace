@@ -14,12 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Track4.unity
   - enabled: 1
-    path: Assets/OnlineMenu.unity
+    path: Assets/SCENES/OnlineMenu.unity
   - enabled: 1
-    path: Assets/HostOptions.unity
+    path: Assets/SCENES/HostOptions.unity
   - enabled: 1
-    path: Assets/JoinGame.unity
+    path: Assets/SCENES/JoinGame.unity
   - enabled: 1
-    path: Assets/OnlineLobby.unity
+    path: Assets/SCENES/OnlineLobby.unity
   - enabled: 1
-    path: Assets/Track1.unity
+    path: Assets/SCENES/Track1.unity
